@@ -6,9 +6,50 @@ const servicesEl = document.getElementById('services');
 const rawEl = document.getElementById('raw-json');
 const rawToggle = document.getElementById('raw-toggle');
 const runBtn = document.getElementById('run-btn');
-const jobList = document.getElementById('job-suggestions');
+const serviceSelect = document.getElementById('service');
+const cronJobSelect = document.getElementById('cronJob');
+const jobHint = document.getElementById('job-hint');
 
 let lastReport = null;
+let jobsCatalog = null;
+
+const SERVICE_META = {
+  sp: {
+    label: 'SP API',
+    whole: { value: 'sp-api', label: 'All SP API jobs (sp-api)' },
+    hint: 'Seller, vendor, and custom SP report types',
+  },
+  ad: {
+    label: 'Ad API',
+    whole: { value: 'ad-api', label: 'All Ad API jobs (ad-api)' },
+    hint: 'Sponsored ads and DSP report types',
+  },
+  backend: {
+    label: 'Backend',
+    whole: { value: 'backend', label: 'All backend jobs (backend)' },
+    hint: 'Keyword / backend pipeline jobs',
+  },
+  sqp: {
+    label: 'SQP',
+    whole: { value: 'sqp', label: 'All SQP periods (sqp)' },
+    hint: 'Search Query Performance pull periods',
+  },
+  all: {
+    label: 'All services',
+    whole: { value: 'all', label: 'Everything (all)' },
+    hint: 'Runs every service pipeline',
+  },
+};
+
+const GROUP_LABELS = {
+  seller: 'Seller reports',
+  vendor: 'Vendor reports',
+  custom: 'Custom reports',
+  ads: 'Sponsored ads',
+  dsp: 'DSP',
+  keyword: 'Keyword jobs',
+  periods: 'SQP periods',
+};
 
 function esc(value) {
   return String(value ?? '')
@@ -187,34 +228,146 @@ function renderReport(report) {
   rawEl.textContent = JSON.stringify(report, null, 2);
 }
 
+function optionGroupsHtml(groups) {
+  return groups
+    .map((group) => {
+      const opts = group.jobs
+        .map((job) => `<option value="${esc(job)}">${esc(job)}</option>`)
+        .join('');
+      return `<optgroup label="${esc(group.label)}">${opts}</optgroup>`;
+    })
+    .join('');
+}
+
+function jobsForService(service) {
+  const jobs = jobsCatalog || {};
+  if (service === 'sp') {
+    const sp = jobs['sp-api'] || {};
+    return [
+      { label: GROUP_LABELS.seller, jobs: sp.seller || [] },
+      { label: GROUP_LABELS.vendor, jobs: sp.vendor || [] },
+      { label: GROUP_LABELS.custom, jobs: sp.custom || [] },
+    ].filter((g) => g.jobs.length);
+  }
+  if (service === 'ad') {
+    const ad = jobs['ad-api'] || {};
+    return [
+      { label: GROUP_LABELS.ads, jobs: ad.ads || [] },
+      { label: GROUP_LABELS.dsp, jobs: ad.dsp || [] },
+    ].filter((g) => g.jobs.length);
+  }
+  if (service === 'backend') {
+    const backend = jobs.backend || {};
+    return [
+      { label: GROUP_LABELS.keyword, jobs: backend.keyword || [] },
+    ].filter((g) => g.jobs.length);
+  }
+  if (service === 'sqp') {
+    return [
+      { label: GROUP_LABELS.periods, jobs: jobs.sqp || [] },
+    ].filter((g) => g.jobs.length);
+  }
+  return [];
+}
+
+function populateCronJobs(service, preferredJob) {
+  const meta = SERVICE_META[service];
+  if (!meta) {
+    cronJobSelect.disabled = true;
+    cronJobSelect.innerHTML = '<option value="">Select a service first…</option>';
+    jobHint.textContent = 'Jobs appear after you pick a service';
+    return;
+  }
+
+  cronJobSelect.disabled = false;
+  jobHint.textContent = meta.hint;
+
+  const groups = jobsForService(service);
+  const whole = `<option value="${esc(meta.whole.value)}">${esc(meta.whole.label)}</option>`;
+  const placeholder = '<option value="" disabled>Choose a cron job…</option>';
+
+  if (service === 'all') {
+    cronJobSelect.innerHTML = `${placeholder}${whole}`;
+  } else {
+    cronJobSelect.innerHTML = `${placeholder}${whole}${optionGroupsHtml(groups)}`;
+  }
+
+  const options = [...cronJobSelect.options].map((o) => o.value);
+  if (preferredJob && options.includes(preferredJob)) {
+    cronJobSelect.value = preferredJob;
+  } else {
+    cronJobSelect.value = meta.whole.value;
+  }
+}
+
+function saveForm() {
+  localStorage.setItem(
+    'cronReportForm',
+    JSON.stringify({
+      dbname: document.getElementById('dbname').value,
+      sellerId: document.getElementById('sellerId').value,
+      cronJob: cronJobSelect.value,
+      service: serviceSelect.value,
+    })
+  );
+}
+
 async function loadJobs() {
   try {
     const res = await fetch('/api/jobs');
     const data = await res.json();
-    const jobs = data.jobs || {};
-    const flat = new Set([...(jobs.aliases || [])]);
-    Object.values(jobs['sp-api'] || {}).flat().forEach((j) => flat.add(j));
-    Object.values(jobs['ad-api'] || {}).flat().forEach((j) => flat.add(j));
-    Object.values(jobs.backend || {}).flat().forEach((j) => flat.add(j));
-    (jobs.sqp || []).forEach((j) => flat.add(j));
-    jobList.innerHTML = [...flat].map((j) => `<option value="${esc(j)}"></option>`).join('');
+    jobsCatalog = data.jobs || {};
   } catch {
-    /* ignore */
+    jobsCatalog = {};
+  }
+
+  let saved = {};
+  try {
+    saved = JSON.parse(localStorage.getItem('cronReportForm') || '{}');
+  } catch { /* ignore */ }
+
+  if (saved.dbname) document.getElementById('dbname').value = saved.dbname;
+  if (saved.sellerId) document.getElementById('sellerId').value = saved.sellerId;
+
+  const service = saved.service && SERVICE_META[saved.service] ? saved.service : '';
+  if (service) {
+    serviceSelect.value = service;
+    populateCronJobs(service, saved.cronJob);
+  } else {
+    populateCronJobs('');
   }
 }
 
+serviceSelect.addEventListener('change', () => {
+  populateCronJobs(serviceSelect.value);
+  saveForm();
+});
+
+cronJobSelect.addEventListener('change', saveForm);
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  const service = serviceSelect.value;
+  const cronJobName = cronJobSelect.value.trim();
+  if (!service || !cronJobName) {
+    setStatus('Select a service and cron job', 'error');
+    return;
+  }
+
   const payload = {
     dbname: document.getElementById('dbname').value.trim(),
     sellerId: document.getElementById('sellerId').value.trim(),
-    cronJobName: document.getElementById('cronJob').value.trim(),
-    service: document.getElementById('service').value || undefined,
+    cronJobName,
+    // Whole-service aliases already encode the service; force only for specific jobs
+    service: ['sp-api', 'ad-api', 'backend', 'sqp', 'all'].includes(cronJobName.toLowerCase())
+      ? undefined
+      : service,
   };
 
   runBtn.disabled = true;
   setStatus('Querying database…', 'loading');
   resultsEl.hidden = true;
+  saveForm();
 
   try {
     const res = await fetch('/api/report', {
@@ -240,25 +393,6 @@ rawToggle.addEventListener('click', () => {
   rawEl.hidden = !rawEl.hidden;
 });
 
-// Restore last form values
-try {
-  const saved = JSON.parse(localStorage.getItem('cronReportForm') || '{}');
-  if (saved.dbname) document.getElementById('dbname').value = saved.dbname;
-  if (saved.sellerId) document.getElementById('sellerId').value = saved.sellerId;
-  if (saved.cronJob) document.getElementById('cronJob').value = saved.cronJob;
-  if (saved.service) document.getElementById('service').value = saved.service;
-} catch { /* ignore */ }
-
-form.addEventListener('change', () => {
-  localStorage.setItem(
-    'cronReportForm',
-    JSON.stringify({
-      dbname: document.getElementById('dbname').value,
-      sellerId: document.getElementById('sellerId').value,
-      cronJob: document.getElementById('cronJob').value,
-      service: document.getElementById('service').value,
-    })
-  );
-});
+form.addEventListener('change', saveForm);
 
 loadJobs();

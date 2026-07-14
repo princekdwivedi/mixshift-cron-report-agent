@@ -98,10 +98,22 @@ h1 {
   font: 500 0.92rem/1.2 var(--font);
 }
 
+.form select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .form input:focus,
 .form select:focus {
   outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
   border-color: var(--accent);
+}
+
+.field-hint {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.35;
 }
 
 .actions {

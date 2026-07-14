@@ -29,20 +29,22 @@
         <input name="sellerId" id="sellerId" required placeholder="seller.ID or AmazonSellerID" />
       </label>
       <label>
-        <span>Cron job</span>
-        <input name="cronJob" id="cronJob" required list="job-suggestions" placeholder="sp-api, Campaigns, WEEK, all…" />
-        <datalist id="job-suggestions"></datalist>
+        <span>Service</span>
+        <select name="service" id="service" required>
+          <option value="">Select service…</option>
+          <option value="sp">SP API</option>
+          <option value="ad">Ad API</option>
+          <option value="backend">Backend</option>
+          <option value="sqp">SQP</option>
+          <option value="all">All services</option>
+        </select>
       </label>
       <label>
-        <span>Force service</span>
-        <select name="service" id="service">
-          <option value="">Auto</option>
-          <option value="all">all</option>
-          <option value="sp">sp</option>
-          <option value="ad">ad</option>
-          <option value="backend">backend</option>
-          <option value="sqp">sqp</option>
+        <span>Cron job</span>
+        <select name="cronJob" id="cronJob" required disabled>
+          <option value="">Select a service first…</option>
         </select>
+        <span class="field-hint" id="job-hint">Jobs appear after you pick a service</span>
       </label>
       <div class="actions">
         <button type="submit" id="run-btn">Run report</button>
