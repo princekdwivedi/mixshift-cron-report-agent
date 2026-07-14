@@ -1,0 +1,22 @@
+{
+  "name": "cron-report-agent",
+  "version": "1.0.0",
+  "description": "Agent CLI: query tenant DB for Ad/SP/Backend/SQP cron success-failure summaries",
+  "main": "src/index.js",
+  "bin": {
+    "cron-report": "./src/cli.js"
+  },
+  "scripts": {
+    "report": "node src/cli.js",
+    "list-jobs": "node src/cli.js --list-jobs",
+    "ui": "node src/server.js",
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mysql2": "^3.11.5"
+  }
+}

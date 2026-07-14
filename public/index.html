@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cron Report Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div>
+        <p class="eyebrow">Mixshift · Ops</p>
+        <h1>Cron Report</h1>
+      </div>
+      <p class="sub">SP API · Ad API · Backend · SQP</p>
+    </header>
+
+    <form id="report-form" class="panel form" autocomplete="off">
+      <label>
+        <span>Database name</span>
+        <input name="dbname" id="dbname" required placeholder="tenant_db_name" />
+      </label>
+      <label>
+        <span>Seller ID</span>
+        <input name="sellerId" id="sellerId" required placeholder="seller.ID or AmazonSellerID" />
+      </label>
+      <label>
+        <span>Cron job</span>
+        <input name="cronJob" id="cronJob" required list="job-suggestions" placeholder="sp-api, Campaigns, WEEK, all…" />
+        <datalist id="job-suggestions"></datalist>
+      </label>
+      <label>
+        <span>Force service</span>
+        <select name="service" id="service">
+          <option value="">Auto</option>
+          <option value="all">all</option>
+          <option value="sp">sp</option>
+          <option value="ad">ad</option>
+          <option value="backend">backend</option>
+          <option value="sqp">sqp</option>
+        </select>
+      </label>
+      <div class="actions">
+        <button type="submit" id="run-btn">Run report</button>
+        <button type="button" id="raw-toggle" class="ghost" disabled>Toggle raw JSON</button>
+      </div>
+    </form>
+
+    <div id="status" class="status" hidden></div>
+
+    <section id="results" class="results" hidden>
+      <div class="summary-bar" id="summary-bar"></div>
+      <div id="services" class="services"></div>
+      <pre id="raw-json" class="raw" hidden></pre>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
