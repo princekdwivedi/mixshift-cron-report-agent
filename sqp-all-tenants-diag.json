@@ -1,0 +1,2348 @@
+{
+  "timestamp": "2026-07-15T11:54:40.393Z",
+  "host": "amazon-api.cfbnt73hrdao.us-east-2.rds.amazonaws.com",
+  "masterDb": "dash_applications",
+  "note": "Only schemas present on this RDS were fully diagnosed. user_databases has no host column; 125 names are not on this instance.",
+  "grand": {
+    "tenantsListed": 161,
+    "tenantsOnThisRds": 36,
+    "tenantsMissingOnRds": 125,
+    "tenantsDiagnosedOk": 36,
+    "tenantsQueryError": 0,
+    "mwsSellers": 567,
+    "mwsWithSQPDate": 53,
+    "mwsWithoutSQPDate": 514,
+    "okToken": 64,
+    "lostAccessOrNoToken": 503,
+    "brandAnalyticsLost": 0,
+    "asinActive": 2859,
+    "asinNeedInitial": 1406,
+    "asinInitCompleted": 1453,
+    "asinInitPending": 234,
+    "asinInitInProgress": 342,
+    "asinInitFailed": 830,
+    "initialJobs": 286,
+    "regularJobs": 241,
+    "initRunning": 45,
+    "initCompleted": 144,
+    "initRetry": 97,
+    "regRunning": 0,
+    "regCompleted": 241,
+    "regRetry": 0,
+    "weeklyPending": 76,
+    "weeklySuccess": 347,
+    "weeklyFailure": 104,
+    "weeklyPermanent": 0,
+    "monthlyPending": 182,
+    "monthlySuccess": 256,
+    "monthlyFailure": 89,
+    "quarterlyPending": 271,
+    "quarterlySuccess": 174,
+    "quarterlyFailure": 82,
+    "logFail7d": 1180,
+    "logFail30d": 1184,
+    "downloadFailed": 1,
+    "mwsSellersWithZeroCron": 494,
+    "diagnosisCounts": {
+      "no_active_ASINs": 26,
+      "initial_stuck": 2,
+      "auth_skip": 2,
+      "no_mws_sellers": 5,
+      "never_started": 1
+    },
+    "missingSqpTables": [],
+    "flagNeedInitStale": [],
+    "flagMwsZeroCron": [
+      "alen",
+      "amzatlas1",
+      "amzell",
+      "armr",
+      "ballcapventures",
+      "bestbrands",
+      "carbonbeauty",
+      "cartology",
+      "dynergyltd",
+      "elevategrowthgroup",
+      "homecontrols",
+      "jayfranco",
+      "kompass",
+      "listingsmanagementca",
+      "marketplaceblueprint",
+      "marketplacerev",
+      "motherroot",
+      "ndspro",
+      "newzealandhoneyco",
+      "northsilvercompany",
+      "omi",
+      "philipjboren",
+      "popl",
+      "rubiomonocoat",
+      "suri",
+      "verticalrail",
+      "zquared"
+    ]
+  },
+  "topMessagesGlobal": [
+    {
+      "msg": "Initial Pull - Check Status failed after 3 attempts: Report still IN_QUEUE - ret",
+      "c": 912
+    },
+    {
+      "msg": "Initial Pull - Retry Check Status failed after 3 attempts: Report still IN_QUEUE",
+      "c": 253
+    },
+    {
+      "msg": "Initial Pull - Check Status failed after 3 attempts: Report still IN_PROGRESS - ",
+      "c": 14
+    },
+    {
+      "msg": "Initial Pull - Retry Check Status failed after 3 attempts: Report still IN_PROGR",
+      "c": 3
+    },
+    {
+      "msg": "Check Status failed after 3 attempts: Report still in queue after 120s wait - re",
+      "c": 2
+    }
+  ],
+  "topDownloadErrorsGlobal": [
+    {
+      "msg": "(null)",
+      "c": 1
+    }
+  ],
+  "tenantsOnHost": [
+    {
+      "db": "alen",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 1,
+      "okTok": 0,
+      "lostAuth": 1,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 1,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 1,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "amzatlas1",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 19,
+      "okTok": 0,
+      "lostAuth": 19,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 19,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 19,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "amzell",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 8,
+      "okTok": 0,
+      "lostAuth": 8,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 8,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 8,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "armr",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 72,
+      "okTok": 21,
+      "lostAuth": 51,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 72,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 72,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "ballcapventures",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 9,
+      "okTok": 0,
+      "lostAuth": 9,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 9,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 9,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "bestbrands",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 2,
+      "okTok": 0,
+      "lostAuth": 2,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 2,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 2,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "carbonbeauty",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 2,
+      "okTok": 0,
+      "lostAuth": 2,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 2,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 2,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "cartology",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 6,
+      "okTok": 0,
+      "lostAuth": 6,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 6,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 6,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "channeledecommerce",
+      "appType": 1,
+      "diag": "initial_stuck",
+      "mws": 20,
+      "okTok": 0,
+      "lostAuth": 20,
+      "baLost": 0,
+      "sqpDateY": 6,
+      "sqpDateN": 14,
+      "asinAct": 245,
+      "needInit": 88,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 25,
+        "completed2": 157,
+        "failed3": 63
+      },
+      "cronInit": 48,
+      "cronReg": 112,
+      "initStat": {
+        "running": 7,
+        "completed": 28,
+        "retry": 13,
+        "other": 0,
+        "total": 48
+      },
+      "regStat": {
+        "running": 0,
+        "completed": 112,
+        "retry": 0,
+        "other": 0,
+        "total": 112
+      },
+      "weekly": {
+        "pending": 31,
+        "success": 118,
+        "failure": 11,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 80,
+        "success": 70,
+        "failure": 10,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 119,
+        "success": 31,
+        "failure": 10,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": {
+        "id": 272,
+        "init": 1,
+        "st": 4,
+        "upd": "2026-07-15T02:26:20.000Z",
+        "ageD": 0.4,
+        "W": 0,
+        "M": 0,
+        "Q": 0
+      },
+      "stale7": false,
+      "jobs7d": 49,
+      "mwsZeroCron": 14,
+      "fail7": 24,
+      "fail30": 24,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "dashamazon",
+      "appType": 1,
+      "diag": "auth_skip",
+      "mws": 37,
+      "okTok": 6,
+      "lostAuth": 31,
+      "baLost": 0,
+      "sqpDateY": 3,
+      "sqpDateN": 34,
+      "asinAct": 34,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 34,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 31,
+      "regStat": {
+        "running": 0,
+        "completed": 31,
+        "retry": 0,
+        "other": 0,
+        "total": 31
+      },
+      "weekly": {
+        "pending": 4,
+        "success": 27,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 25,
+        "success": 6,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 29,
+        "success": 2,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": {
+        "id": 199,
+        "init": 0,
+        "st": 2,
+        "upd": "2026-07-14T02:00:36.000Z",
+        "ageD": 1.4,
+        "W": 1,
+        "M": 0,
+        "Q": 0
+      },
+      "stale7": false,
+      "jobs7d": 4,
+      "mwsZeroCron": 34,
+      "fail7": 0,
+      "fail30": 2,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "demo",
+      "appType": 1,
+      "diag": "no_mws_sellers",
+      "mws": 0,
+      "okTok": 0,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 0,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 0,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "dryflyventures",
+      "appType": 1,
+      "diag": "no_mws_sellers",
+      "mws": 0,
+      "okTok": 0,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 0,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 0,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "dynergyltd",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 6,
+      "okTok": 0,
+      "lostAuth": 6,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 6,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 6,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "elevategrowthgroup",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 17,
+      "okTok": 0,
+      "lostAuth": 17,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 17,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 17,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "homecontrols",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 1,
+      "okTok": 0,
+      "lostAuth": 1,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 1,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 1,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "jayfranco",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 17,
+      "okTok": 17,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 17,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 17,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "kom",
+      "appType": 1,
+      "diag": "no_mws_sellers",
+      "mws": 0,
+      "okTok": 0,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 0,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 0,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "kompass",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 6,
+      "okTok": 0,
+      "lostAuth": 6,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 6,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 6,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "listingsmanagementca",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 8,
+      "okTok": 0,
+      "lostAuth": 8,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 8,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 8,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "marketplaceblueprint",
+      "appType": 1,
+      "diag": "never_started",
+      "mws": 29,
+      "okTok": 6,
+      "lostAuth": 23,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 29,
+      "asinAct": 2,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 2,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 29,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "marketplacerev",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 12,
+      "okTok": 6,
+      "lostAuth": 6,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 12,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 12,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "marpartners",
+      "appType": 1,
+      "diag": "initial_stuck",
+      "mws": 81,
+      "okTok": 0,
+      "lostAuth": 81,
+      "baLost": 0,
+      "sqpDateY": 43,
+      "sqpDateN": 38,
+      "asinAct": 2570,
+      "needInit": 1318,
+      "asinInit": {
+        "null": 234,
+        "pending0": 0,
+        "inProgress1": 317,
+        "completed2": 1252,
+        "failed3": 767
+      },
+      "cronInit": 238,
+      "cronReg": 89,
+      "initStat": {
+        "running": 38,
+        "completed": 116,
+        "retry": 84,
+        "other": 0,
+        "total": 238
+      },
+      "regStat": {
+        "running": 0,
+        "completed": 89,
+        "retry": 0,
+        "other": 0,
+        "total": 89
+      },
+      "weekly": {
+        "pending": 40,
+        "success": 194,
+        "failure": 93,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 70,
+        "success": 178,
+        "failure": 79,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 114,
+        "success": 141,
+        "failure": 72,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": {
+        "id": 315,
+        "init": 1,
+        "st": 4,
+        "upd": "2026-07-15T02:29:55.000Z",
+        "ageD": 0.4,
+        "W": 0,
+        "M": 0,
+        "Q": 0
+      },
+      "stale7": false,
+      "jobs7d": 237,
+      "mwsZeroCron": 18,
+      "fail7": 1156,
+      "fail30": 1158,
+      "dlFail": 1,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "mixshifttest",
+      "appType": 1,
+      "diag": "no_mws_sellers",
+      "mws": 0,
+      "okTok": 0,
+      "lostAuth": 0,
+      "baLost": 0,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 0,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "motherroot",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 1,
+      "okTok": 0,
+      "lostAuth": 1,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 1,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 1,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "movatik",
+      "appType": 1,
+      "diag": "no_mws_sellers",
+      "mws": 0,
+      "okTok": 0,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 0,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 0,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "ndspro",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 6,
+      "okTok": 0,
+      "lostAuth": 6,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 6,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 6,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "newzealandhoneyco",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 8,
+      "okTok": 0,
+      "lostAuth": 8,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 8,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 8,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "northsilvercompany",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 74,
+      "okTok": 0,
+      "lostAuth": 74,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 74,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 74,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "omi",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 5,
+      "okTok": 5,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 5,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 5,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "philipjboren",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 47,
+      "okTok": 0,
+      "lostAuth": 47,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 47,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 47,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "popl",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 3,
+      "okTok": 3,
+      "lostAuth": 0,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 3,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 3,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": false
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "rubiomonocoat",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 25,
+      "okTok": 0,
+      "lostAuth": 25,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 25,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 25,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "suri",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 2,
+      "okTok": 0,
+      "lostAuth": 2,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 2,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 2,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "verticalrail",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 26,
+      "okTok": 0,
+      "lostAuth": 26,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 26,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 26,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "voartex",
+      "appType": 1,
+      "diag": "auth_skip",
+      "mws": 4,
+      "okTok": 0,
+      "lostAuth": 4,
+      "baLost": 0,
+      "sqpDateY": 1,
+      "sqpDateN": 3,
+      "asinAct": 8,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 8,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 9,
+      "regStat": {
+        "running": 0,
+        "completed": 9,
+        "retry": 0,
+        "other": 0,
+        "total": 9
+      },
+      "weekly": {
+        "pending": 1,
+        "success": 8,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 7,
+        "success": 2,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 9,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": {
+        "id": 12,
+        "init": 0,
+        "st": 2,
+        "upd": "2026-07-14T12:46:34.000Z",
+        "ageD": 1,
+        "W": 1,
+        "M": 0,
+        "Q": 0
+      },
+      "stale7": false,
+      "jobs7d": 1,
+      "mwsZeroCron": 3,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": false,
+        "sqpTablesMissing": false,
+        "noActiveAsins": false,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    },
+    {
+      "db": "zquared",
+      "appType": 1,
+      "diag": "no_active_ASINs",
+      "mws": 13,
+      "okTok": 0,
+      "lostAuth": 13,
+      "baLost": 0,
+      "sqpDateY": 0,
+      "sqpDateN": 13,
+      "asinAct": 0,
+      "needInit": 0,
+      "asinInit": {
+        "null": 0,
+        "pending0": 0,
+        "inProgress1": 0,
+        "completed2": 0,
+        "failed3": 0
+      },
+      "cronInit": 0,
+      "cronReg": 0,
+      "weekly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "monthly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "quarterly": {
+        "pending": 0,
+        "success": 0,
+        "failure": 0,
+        "permanent": 0,
+        "null": 0
+      },
+      "latest": null,
+      "stale7": true,
+      "jobs7d": 0,
+      "mwsZeroCron": 13,
+      "fail7": 0,
+      "fail30": 0,
+      "dlFail": 0,
+      "flags": {
+        "needInitialButCronEmptyOrStale": false,
+        "mwsButZeroCron": true,
+        "sqpTablesMissing": false,
+        "noActiveAsins": true,
+        "authHeavy": true
+      },
+      "miss": [],
+      "err": null
+    }
+  ],
+  "missingOnThisRdsSample": [
+    "abc",
+    "adlabsppcmanagement",
+    "adyogi",
+    "amazonquicksolution",
+    "amazonxperts",
+    "amzacsellerate",
+    "amzatlas",
+    "amzclever",
+    "amzdataiq",
+    "amzppc",
+    "amzservicesagency",
+    "astroteamx",
+    "bayin",
+    "beardownbrands",
+    "bestbrandsconsumerproducts",
+    "bestbrandsconsumerproductsinc",
+    "betterworldproducts",
+    "bihlerflexllc",
+    "booyahdash",
+    "brandbuddy",
+    "brandbuddyllc",
+    "btbfoodservice",
+    "chaddavisconsulting",
+    "channeled",
+    "clearads",
+    "clicksmart",
+    "clicksmartdigital",
+    "cml",
+    "cressisubspa",
+    "crush"
+  ],
+  "missingOnThisRdsCount": 125
+}
